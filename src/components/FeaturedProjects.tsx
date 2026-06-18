@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 export default async function FeaturedProjects() {
   const projects = await getProjects();
+  
 
   const featuredProjects = projects.filter(
     (project) => project.featured

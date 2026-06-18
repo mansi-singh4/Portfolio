@@ -94,3 +94,19 @@ export async function deleteProject(id: string) {
   revalidatePath("/projects");
   revalidatePath("/");
 }
+export async function toggleFeatured(
+  id: string,
+  currentValue: boolean
+) {
+  "use server";
+
+  await prisma.project.update({
+    where: { id },
+    data: {
+      featured: !currentValue,
+    },
+  });
+
+  revalidatePath("/");
+  revalidatePath("/admin");
+}

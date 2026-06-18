@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import { updateProject } from "../../actions";
 import { deleteProject } from "../../actions";
+import { toggleFeatured } from "../../actions";
+
 
 type Props = {
   params: Promise<{
@@ -66,6 +68,27 @@ export default async function EditProjectPage({
     className="border border-red-500/30 px-4 py-2 text-red-400"
   >
     Delete
+  </button>
+</form>
+
+<form
+  action={toggleFeatured.bind(
+    null,
+    project.id,
+    project.featured
+  )}
+>
+  <button
+    type="submit"
+    className={`px-4 py-2 border ${
+      project.featured
+        ? "border-green-500 text-green-400"
+        : "border-zinc-700 text-zinc-500"
+    }`}
+  >
+    {project.featured
+      ? "Featured"
+      : "Not Featured"}
   </button>
 </form>
     </main>
