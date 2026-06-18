@@ -1,7 +1,15 @@
 import { prisma } from "@/lib/prisma";
 import { createProject } from "./actions";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 
 export default async function AdminPage() {
+
+   const session = await auth();
+
+  if (!session) {
+    redirect("/api/auth/signin");
+  }
   const projects = await prisma.project.findMany({
     orderBy: {
       createdAt: "desc",
