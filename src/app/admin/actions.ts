@@ -16,9 +16,9 @@ export async function createProject(formData: FormData) {
 
   const githubUrl = formData.get("githubUrl") as string;
   const liveUrl = formData.get("liveUrl") as string;
-  const imageUrl =
-    (formData.get("imageUrl") as string) ||
-    "/projects/placeholder.png";
+const imageUrl =
+  (formData.get("imageUrl") as string) ||
+    "/projects/placeholder.jpeg";
 
   const techStack =
     (formData.get("techStack") as string)
@@ -28,6 +28,7 @@ export async function createProject(formData: FormData) {
 
   const featured =
     formData.get("featured") === "on";
+    console.log("IMAGE URL:", imageUrl);
 
   await prisma.project.create({
     data: {
@@ -60,11 +61,47 @@ export async function updateProject(
   id: string,
   formData: FormData
 ) {
-  "use server";
+  const title =
+    (formData.get("title") as string) || "";
 
-  const title = formData.get("title") as string;
-  const slug = formData.get("slug") as string;
-  const description = formData.get("description") as string;
+  const slug =
+    (formData.get("slug") as string) || "";
+
+  const description =
+    (formData.get("description") as string) || "";
+
+  const overview =
+    (formData.get("overview") as string) || "";
+
+  const problem =
+    (formData.get("problem") as string) || "";
+
+  const solution =
+    (formData.get("solution") as string) || "";
+
+  const challenges =
+    (formData.get("challenges") as string) || "";
+
+  const learnings =
+    (formData.get("learnings") as string) || "";
+
+  const githubUrl =
+    (formData.get("githubUrl") as string) || "";
+
+  const liveUrl =
+    (formData.get("liveUrl") as string) || "";
+
+  const imageUrl =
+    (formData.get("imageUrl") as string) || "";
+
+  const techStack =
+    ((formData.get("techStack") as string) || "")
+      .split(",")
+      .map((tech) => tech.trim())
+      .filter(Boolean);
+
+  const featured =
+    formData.get("featured") === "on";
 
   await prisma.project.update({
     where: {
@@ -74,11 +111,27 @@ export async function updateProject(
       title,
       slug,
       description,
+
+      overview,
+      problem,
+      solution,
+      challenges,
+      learnings,
+
+      githubUrl,
+      liveUrl,
+      imageUrl,
+
+      techStack,
+
+      featured,
     },
   });
 
+  revalidatePath("/");
   revalidatePath("/admin");
   revalidatePath("/projects");
+  revalidatePath(`/projects/${slug}`);
 }
 
 export async function deleteProject(id: string) {
