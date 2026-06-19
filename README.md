@@ -1,36 +1,201 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio CMS
 
-## Getting Started
+A full-stack portfolio platform built with Next.js, Prisma, PostgreSQL, and Auth.js. Designed to showcase projects, experiences, and achievements while providing a custom content management system for managing portfolio content without modifying code.
 
-First, run the development server:
+## Live Demo
+
+🔗 https://portfolio-ten-eta-17.vercel.app/
+
+---
+
+## Features
+
+### Portfolio Website
+
+* Responsive modern UI
+* Featured projects showcase
+* Detailed project case studies
+* About and contact sections
+* Resume integration
+* Smooth section navigation
+* Mobile-friendly design
+
+### Admin Dashboard
+
+* Secure Google Authentication
+* Create, edit, and delete projects
+* Manage featured projects
+* Upload and update project images
+* Dynamic project content management
+* Update portfolio content without redeployment
+
+### Analytics
+
+* Visitor analytics
+* Project view tracking
+* User engagement monitoring
+* Performance insights with Vercel Speed Insights
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* Next.js 16
+* React
+* TypeScript
+* Tailwind CSS
+
+### Backend
+
+* Next.js Server Actions
+* Prisma ORM
+* PostgreSQL (Neon)
+
+### Authentication
+
+* Auth.js
+* Google OAuth
+
+### File Storage
+
+* UploadThing
+
+### Analytics
+
+* Vercel Analytics
+* Vercel Speed Insights
+
+### Deployment
+
+* Vercel
+
+---
+
+## Why I Built This
+
+Most portfolio websites are static and require code changes whenever new projects, experiences, or achievements need to be added.
+
+I wanted a portfolio that could evolve over time, so I built a custom Portfolio CMS with an admin dashboard that allows content, projects, images, and featured sections to be managed dynamically.
+
+The platform also includes analytics to understand visitor engagement and identify which content attracts the most attention.
+
+---
+
+## What Can Be Managed
+
+The admin dashboard allows:
+
+* Creating, editing, and deleting projects
+* Managing featured projects
+* Uploading project images
+* Updating project descriptions
+* Maintaining project case studies
+* Customizing portfolio content without touching the codebase
+
+---
+
+## Project Structure
+
+```text
+src/
+├── app/
+├── components/
+├── lib/
+├── auth.ts
+
+prisma/
+├── schema.prisma
+
+public/
+├── images/
+├── resume/
+```
+
+---
+
+## Local Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/mansi-singh4/Portfolio.git
+cd Portfolio
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Configure Environment Variables
+
+Create a `.env` file:
+
+```env
+DATABASE_URL=
+
+AUTH_SECRET=
+
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+UPLOADTHING_TOKEN=
+```
+
+### Generate Prisma Client
+
+```bash
+npx prisma generate
+```
+
+### Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Key Learnings
 
-To learn more about Next.js, take a look at the following resources:
+* Building full-stack applications with Next.js
+* Authentication and authorization using Auth.js
+* Database design with Prisma and PostgreSQL
+* File upload workflows with UploadThing
+* Analytics and user engagement tracking
+* Production deployment using Vercel
+* Designing maintainable content management systems
+* Working effectively with AI-assisted development tools
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Future Improvements
 
-## Deploy on Vercel
+* Drag-and-drop featured project ordering
+* Rich text editor for project content
+* Dashboard analytics panel
+* Project categories and tags
+* Blog integration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+
+### Mansi Singh
+
+Computer Science Student • Full-Stack Developer
+
+Building software, exploring AI, and creating products that solve real-world problems.
+
+* LinkedIn: https://www.linkedin.com/in/mansi-singh-90b521333/
+* Portfolio: https://portfolio-ten-eta-17.vercel.app/
+
