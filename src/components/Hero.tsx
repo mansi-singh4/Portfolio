@@ -28,9 +28,11 @@ export default function Hero() {
 </p>
 
             <div className="flex gap-4 mt-10">
+              <Link href="/projects">
               <button className="bg-white text-black px-6 py-3 text-sm uppercase tracking-widest font-medium hover:bg-zinc-200 transition">
                 View Projects
               </button>
+              </Link>
 
 
               <Link
