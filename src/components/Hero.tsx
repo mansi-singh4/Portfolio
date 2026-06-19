@@ -20,8 +20,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-8 text-lg text-zinc-400 max-w-xl">
-              Building modern web applications with
-              Next.js, PostgreSQL, Prisma and AI.
+Curious about how things work. Passionate about building things that matter.
             </p>
             <p className="mt-4 text-zinc-500 text-sm uppercase tracking-widest">
   Seeking Software Engineering Internships
@@ -36,7 +35,7 @@ export default function Hero() {
 
 
               <Link
-  href="/resume.pdf"
+  href="/resume/Mansi_Singh_Resume.pdf"
   target="_blank"
   className="border border-white/20 px-6 py-3 text-sm uppercase tracking-widest hover:border-white transition"
 >

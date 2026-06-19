@@ -16,15 +16,15 @@ export default function ContactPage() {
 
       <div className="space-y-4 text-lg">
         <p>
-          Email: your.email@example.com
+          Email:    mansisingh2072@gmail.com
         </p>
 
         <p>
-          LinkedIn: linkedin.com/in/yourprofile
+          LinkedIn:    https://www.linkedin.com/in/mansi-singh-90b521333/
         </p>
 
         <p>
-          GitHub: github.com/yourusername
+          GitHub:    https://github.com/mansi-singh4
         </p>
       </div>
     </main>

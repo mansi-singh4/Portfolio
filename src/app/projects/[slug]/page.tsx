@@ -84,7 +84,7 @@ const project = await getProjectBySlug(slug);
     href="https://github.com"
     target="_blank"
     rel="noopener noreferrer"
-    className="border border-white/10 px-5 py-3 hover:border-white/30 transition"
+    className="border border-white/50 px-5 py-3 hover:border-white/30 transition"
   >
     GitHub
   </a>
@@ -93,7 +93,7 @@ const project = await getProjectBySlug(slug);
     href="https://google.com"
     target="_blank"
     rel="noopener noreferrer"
-    className="border border-white/10 px-5 py-3 hover:border-white/30 transition"
+    className="border border-white/50 px-5 py-3 hover:border-white/30 transition"
   >
     Live Demo
   </a>

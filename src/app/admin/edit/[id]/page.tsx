@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
-import { updateProject } from "../../actions";
+import { updateProject,deleteProject } from "../../actions";
+import EditImageUpload from "@/components/EditImageUpload";
 
 type Props = {
   params: Promise<{
@@ -130,20 +131,9 @@ export default async function EditProjectPage({
             Project Image
           </h2>
 
-          {project.imageUrl && (
-            <img
-              src={project.imageUrl}
-              alt={project.title}
-              className="w-full max-w-xl rounded-xl border border-white/10"
-            />
-          )}
-
-          <input
-            name="imageUrl"
-            defaultValue={project.imageUrl}
-            placeholder="Image URL"
-            className="w-full mt-6 rounded-xl border border-white/10 bg-zinc-900/50 p-4"
-          />
+<EditImageUpload
+  initialUrl={project.imageUrl}
+/>
         </section>
 
         {/* Case Study */}
@@ -219,7 +209,19 @@ export default async function EditProjectPage({
           Save Changes
         </button>
 
+        
+
       </form>
+      <div className="pt-4 border-t border-white/10">
+  <form action={deleteProject.bind(null, project.id)}>
+    <button
+      type="submit"
+      className="px-6 py-3 border border-red-500/30 text-red-400 hover:bg-red-500/10 rounded-xl transition"
+    >
+      Delete Project
+    </button>
+  </form>
+</div>
     </main>
   );
 }

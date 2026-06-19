@@ -17,7 +17,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-6 text-sm">
           <Link
-            href="https://github.com/YOUR_GITHUB"
+            href="https://github.com/mansi-singh4"
             target="_blank"
             className="hover:text-zinc-300 transition"
           >
@@ -25,7 +25,7 @@ export default function Footer() {
           </Link>
 
           <Link
-            href="https://linkedin.com/in/YOUR_LINKEDIN"
+            href="https://www.linkedin.com/in/mansi-singh-90b521333/"
             target="_blank"
             className="hover:text-zinc-300 transition"
           >
@@ -33,19 +33,19 @@ export default function Footer() {
           </Link>
 
           <Link
-            href="mailto:YOUR_EMAIL"
+            href="mailto:mansisingh2072@gmail.com"
             className="hover:text-zinc-300 transition"
           >
             Email
           </Link>
 
-          <Link
+          {/* <Link
             href="/resume.pdf"
             target="_blank"
             className="hover:text-zinc-300 transition"
           >
             Resume
-          </Link>
+          </Link> */}
         </div>
       </div>
 

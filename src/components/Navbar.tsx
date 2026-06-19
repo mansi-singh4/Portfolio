@@ -14,12 +14,12 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-10 text-sm uppercase tracking-widest">
           <Link href="/">Home</Link>
           <Link href="/projects">Projects</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="#about">About</Link>
+          <Link href="#contact">Contact</Link>
         </nav>
 
 <Link
-  href="/resume.pdf"
+  href="/resume/Mansi_Singh_Resume.pdf"
   target="_blank"
   className="border border-white/20 px-5 py-2 text-xs uppercase tracking-widest hover:border-white transition"
 >
