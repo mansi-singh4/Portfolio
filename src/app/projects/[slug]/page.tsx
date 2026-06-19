@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ProjectViewTracker
+from "@/components/ProjectViewTracker";
 import { getProjectBySlug } from "@/lib/projects";
+
 type Props = {
   params: Promise<{
     slug: string;
@@ -21,6 +24,11 @@ const project = await getProjectBySlug(slug);
 
   return (
     <main className="max-w-6xl mx-auto px-8 py-24">
+
+        <ProjectViewTracker
+    title={project.title}
+  />
+
 
       {/* Hero */}
 
