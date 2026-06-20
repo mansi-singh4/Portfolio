@@ -53,9 +53,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-8 py-6 text-sm text-zinc-500 flex justify-between">
           <span>© 2026 Mansi Singh</span>
 
-          <span>
-            Built with Next.js, Prisma & PostgreSQL
-          </span>
+
         </div>
       </div>
     </footer>
