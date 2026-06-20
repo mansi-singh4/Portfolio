@@ -81,7 +81,7 @@ const project = await getProjectBySlug(slug);
 
 <div className="flex gap-4 mb-20">
   <a
-    href="https://github.com"
+    href={project.githubUrl}
     target="_blank"
     rel="noopener noreferrer"
     className="border border-white/50 px-5 py-3 hover:border-white/30 transition"
@@ -90,7 +90,7 @@ const project = await getProjectBySlug(slug);
   </a>
 
   <a
-    href="https://google.com"
+    href={project.liveUrl}
     target="_blank"
     rel="noopener noreferrer"
     className="border border-white/50 px-5 py-3 hover:border-white/30 transition"
